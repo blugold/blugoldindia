@@ -1,0 +1,393 @@
+/* Body Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(45deg, rgb(255, 157, 157), rgb(255, 215, 142), rgb(255, 255, 108), rgb(132, 255, 132), rgb(110, 110, 255), rgb(200, 123, 255), violet, rgb(255, 139, 139));    background-size: 400% 400%;
+    animation: waterFlow 10s ease-in-out infinite;
+    color: white;
+    overflow-x: hidden;
+}
+@font-face {
+    font-family: "Big Shoulders Inline";
+    src: url("../fonts/BigShouldersInline-VariableFont_opsz,wght.woff2") format("woff2"),
+         url("../fonts/BigShouldersInline-VariableFont_opsz,wght.woff") format("woff");
+    font-weight: 100 900; /* Variable font weight */
+    font-style: normal;
+}
+/* Roboto - Regular */
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-VariableFont_width,wght.woff2") format("woff2"),
+         url("../fonts/Roboto-VariableFont_width,wght.woff") format("woff");
+    font-weight: 100 900; /* Variable font weight */
+    font-style: normal;
+}
+
+/* Roboto - Italic */
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Italic-VariableFont_width,wght.woff2") format("woff2"),
+         url("../fonts/Roboto-Italic-VariableFont_width,wght.woff") format("woff");
+    font-weight: 100 900; /* Variable font weight */
+    font-style: italic;
+}
+@font-face {
+    font-family: "Gabriela";
+    src: url("../fonts/Gabriela-Regular.woff2") format("woff2"),
+         url("../fonts/Gabriela-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Lilita One";
+    src: url("../fonts/LilitaOne-Regular.woff2") format("woff2"),
+         url("../fonts/LilitaOne-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Permanent Marker";
+    src: url("../fonts/PermanentMarker-Regular.woff2") format("woff2"),
+         url("../fonts/PermanentMarker-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+/* Ubuntu - Bold */
+@font-face {
+    font-family: "Ubuntu";
+    src: url("../fonts/Ubuntu-Bold.woff2") format("woff2"),
+         url("../fonts/Ubuntu-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Ubuntu - Bold Italic */
+@font-face {
+    font-family: "Ubuntu";
+    src: url("../fonts/Ubuntu-BoldItalic.woff2") format("woff2"),
+         url("../fonts/Ubuntu-BoldItalic.woff") format("woff");
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Ubuntu - Italic */
+@font-face {
+    font-family: "Ubuntu";
+    src: url("../fonts/Ubuntu-Italic.woff2") format("woff2"),
+         url("../fonts/Ubuntu-Italic.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Ubuntu - Light */
+@font-face {
+    font-family: "Ubuntu";
+    src: url("../fonts/Ubuntu-Light.woff2") format("woff2"),
+         url("../fonts/Ubuntu-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Ubuntu - Light Italic */
+@font-face {
+    font-family: "Ubuntu";
+    src: url("../fonts/Ubuntu-LightItalic.woff2") format("woff2"),
+         url("../fonts/Ubuntu-LightItalic.woff") format("woff");
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Ubuntu - Medium */
+@font-face {
+    font-family: "Ubuntu";
+    src: url("../fonts/Ubuntu-Medium.woff2") format("woff2"),
+         url("../fonts/Ubuntu-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Ubuntu - Medium Italic */
+@font-face {
+    font-family: "Ubuntu";
+    src: url("../fonts/Ubuntu-MediumItalic.woff2") format("woff2"),
+         url("../fonts/Ubuntu-MediumItalic.woff") format("woff");
+    font-weight: 500;
+    font-style: italic;
+}
+@keyframes waterFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Back Button Styles */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    z-index: 1000; /* Ensure it's above other content */
+    backdrop-filter: blur(10px); /* Blur effect */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.back-btn i {
+    margin-right: 10px;
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Quote Section Styles */
+#quote {
+    padding: 80px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: rgba(195, 195, 195, 0.641); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Glass blur effect */
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    width: 100%;
+}
+
+#quote h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+#quote .intro-text {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    font-family: "Poppins", sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Quote Form */
+.quote-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+#name{
+    background-color: #4848485b;
+}
+#email{
+    background-color: #4848485b;
+}
+#phone{
+    background-color: #4848485b;
+}
+#message{
+    background-color: #4848485b;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #003cff;
+    outline: none;
+}
+
+.form-group label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 10px;
+    font-size: 0.8rem;
+    color: #01d0ff;
+    background: rgba(0, 39, 77, 0.8);
+    padding: 0 5px;
+}
+
+.cta-btn {
+    padding: 15px 30px;
+    background: #01d0ff;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+}
+
+.cta-btn:hover {
+    background: #00a8d9;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #quote {
+        padding: 40px 10px;
+    }
+
+    #quote h1 {
+        font-size: 2rem;
+    }
+
+    #quote .intro-text {
+        font-size: 1rem;
+    }
+
+    .quote-form {
+        padding: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px;
+    }
+
+    .form-group label {
+        top: 10px;
+        left: 10px;
+    }
+
+    .form-group input:focus + label,
+    .form-group input:not(:placeholder-shown) + label,
+    .form-group textarea:focus + label,
+    .form-group textarea:not(:placeholder-shown) + label {
+        top: -10px;
+        left: 5px;
+        font-size: 0.7rem;
+    }
+}
+#footer{
+    background-color: #000000;
+    height: auto;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #00274d;
+}
+
+.close-modal:hover {
+    color: #01d0ff;
+}
+
+#modal-message {
+    font-size: 1.2rem;
+    color: #00274d;
+    margin: 20px 0;
+}
+
+/* Loading Spinner Styles */
+.loading-spinner {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #01d0ff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
